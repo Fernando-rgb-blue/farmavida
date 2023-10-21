@@ -1,0 +1,38 @@
+doctype html
+html
+    head
+        title Reportes - Farmacia
+        link(rel='stylesheet' href='/css/index.css')
+        link(rel='stylesheet', href='/css/popup.css')
+        link(rel='stylesheet' href='/css/reports.css')
+    body
+        include header.pug
+        include popups/popupRe6Dat.pug
+
+        div.loader#loader
+
+        div.titleContent
+            h1 REPORTES
+
+        div.contentCont#contentCont
+            div.contentRep
+                ul.subHeader#subheader
+                    li(id="report1" class="btnReport") Mostrar todo
+                        ul.submenuRep1#submenuRep1
+                            li(id="report1a" class="btnReport") Cliente
+                            li(id="report1b" class="btnReport") Empleado
+                            li(id="report1c" class="btnReport") Pedido
+                            li(id="report1d" class="btnReport") Producto
+                            li(id="report1e" class="btnReport") Proveedor
+                            li(id="report1f" class="btnReport") Venta
+                    li(id="report2" class="btnReport") Pedido con proveedor
+                    li(id="report3" class="btnReport") Stock de productos
+                    li(id="report4" class="btnReport") Proveedores y pedidos 
+                    li(id="report5" class="btnReport") Productos más vendidos
+                    li(id="report6PopUp" class="btnReport") Ventas por fechas
+                div.resultsRep#resultsRep
+
+        script(src="https://code.jquery.com/jquery-3.7.0.min.js")
+        script(src="https://cdn.jsdelivr.net/npm/sweetalert2@11")
+        script(src="/js/reports.js") 
+

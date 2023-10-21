@@ -1,0 +1,47 @@
+.popup.popupChaProd#popupChaProd
+    .popup-content#popupContent
+        .popup-close-content
+            button(type="button").close#closeChaProd &times;
+        .popup-title-content
+            h2 Modificar Productos
+        .popup-form-content
+            form(action="/products" method="post")#formChaProd
+                label(for="ideProd") ID del Producto:
+                input(type="number" id="ideProdCha" name="_id" style="background-color: #E4DEDE")
+
+                label(for="nomProd") Nombre del Producto:
+                input(type="text" id="nomProdCha" name="Nom_Prod")
+
+                label(for="conProd") Concentrado:
+                input(type="text" id="conProdCha" name="Concent")
+
+                label(for="nomForProd") Nombre Formal de Farmacia:
+                input(type="text" id="nomForProdCha" name="Nom_Form_Farm")
+
+                label(for="nomForSimProd") Nombre Formal de Farmacia Simp.:
+                input(type="text" id="nomForSimProdCha" name="Nom_Form_Farm_Simplif")
+
+                label(for="presProd") Presentacion:
+                input(type="text" id="presProdCha" name="Presentac")
+
+                label(for="fraProd") Fracciones:
+                input(type="number" id="fraProdCha" name="Fracciones" min="0")
+
+                label(for="fecVenRegProd") Fecha de Vencimiento de RS:
+                input(type="date" id="fecVenRegProdCha" name="Fec_Vcto_Reg_Sanitario")
+
+                label(for="numRegProd") Numero de RS:
+                input(type="text" id="numRegProdCha" name="Num_RegSan")
+
+                label(for="sitProdCha") Situación:
+                select(name='sitProdCha' id='sitProdCha').inputFormAdd
+                    option(value='ACT') Activado
+                    option(value='DES') Desactivado
+
+                label(for="stoProd") Stock:
+                input(type="number" id="stoProdCha" name="Stock")
+
+                label(for="precProd") Precio:
+                input(type="number" id="precProdCha" name="Precio")
+
+                button(type="submit" id="btnSubmitCha" disabled) Modificar

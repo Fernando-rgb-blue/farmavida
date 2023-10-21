@@ -1,0 +1,60 @@
+.bodyy2 {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+    width: 100vw;
+    min-width: 1200px;
+    overflow-x: none;
+}
+
+h1 {
+text-align: center;
+}
+
+form {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type='text'],
+input[type='number'],
+input[type='date'] {
+    margin: 5px 0;
+    padding: 5px;
+    width: 200px;
+}
+
+#productosContainer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.producto {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    width: 200px;
+}
+
+#precioTotal {
+    font-weight: bold;
+    background-color: #eee;
+    border: none;
+}
+
+.invalid {
+    background-color: red;
+}

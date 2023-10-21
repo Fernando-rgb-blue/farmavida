@@ -1,0 +1,43 @@
+
+<div class="popup popupChaProd" id="popupChaProd">
+  <div class="popup-content" id="popupContent">
+    <div class="popup-close-content">
+      <button class="close" type="button" id="closeChaProd">&times;</button>
+    </div>
+    <div class="popup-title-content">
+      <h2>Modificar Productos</h2>
+    </div>
+    <div class="popup-form-content">
+      <form action="/products" method="post" id="formChaProd">
+        <label for="ideProd">ID del Producto:</label>
+        <input type="number" id="ideProdCha" name="_id" style="background-color: #E4DEDE"/>
+        <label for="nomProd">Nombre del Producto:</label>
+        <input type="text" id="nomProdCha" name="Nom_Prod"/>
+        <label for="conProd">Concentrado:</label>
+        <input type="text" id="conProdCha" name="Concent"/>
+        <label for="nomForProd">Nombre Formal de Farmacia:</label>
+        <input type="text" id="nomForProdCha" name="Nom_Form_Farm"/>
+        <label for="nomForSimProd">Nombre Formal de Farmacia Simp.:</label>
+        <input type="text" id="nomForSimProdCha" name="Nom_Form_Farm_Simplif"/>
+        <label for="presProd">Presentacion:</label>
+        <input type="text" id="presProdCha" name="Presentac"/>
+        <label for="fraProd">Fracciones:</label>
+        <input type="number" id="fraProdCha" name="Fracciones" min="0"/>
+        <label for="fecVenRegProd">Fecha de Vencimiento de RS:</label>
+        <input type="date" id="fecVenRegProdCha" name="Fec_Vcto_Reg_Sanitario"/>
+        <label for="numRegProd">Numero de RS:</label>
+        <input type="text" id="numRegProdCha" name="Num_RegSan"/>
+        <label for="sitProdCha">Situación:</label>
+        <select class="inputFormAdd" name="sitProdCha" id="sitProdCha">
+          <option value="ACT">Activado</option>
+          <option value="DES">Desactivado</option>
+        </select>
+        <label for="stoProd">Stock:</label>
+        <input type="number" id="stoProdCha" name="Stock"/>
+        <label for="precProd">Precio:</label>
+        <input type="number" id="precProdCha" name="Precio"/>
+        <button type="submit" id="btnSubmitCha" disabled="disabled">Modificar</button>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,46 @@
+doctype html
+html
+    head
+        title Productos - Farmacia
+        link(rel='stylesheet' href='/css/index.css')
+        link(rel='stylesheet' href='/css/products.css')
+        link(rel='stylesheet', href='/css/popup.css')
+
+    body
+        include header.pug
+        include popups/popupProAdd.pug
+        include popups/popupProCha.pug
+        include popups/popupProDel.pug
+
+        div.loader#loader
+
+        div.nav2Cus
+            div.addContent
+                div.title-bar
+                    h2 Productos
+                div.options
+                    button#addButton.btnStyle Añadir
+                    button#chaButton.btnStyle Modificar
+                    button#delButton.btnStyle Eliminar
+            div.searchContent
+                form(action="/products" method="post")#formSeaProd.formSearch
+                    input(type='number' placeholder='Buscar' id='prodSea' name='searchBar')
+                    select(name='catProdSea' id='catProdSea')
+                        option(value='_id') ID
+                        option(value='Nom_Prod') Nombre
+                        option(value='Concent') Concentrado
+                        option(value='Nom_Form_Farm') Nombre Formal
+                        option(value='Nom_Form_Farm_Simplif') Nombre Formal Simp.
+                        option(value='Fec_Vcto_Reg_Sanitario') Fecha Ven. RS
+                        option(value='Num_RegSan') Numero de RS
+                        option(value='Situacion') Situacion
+                        option(value='Stock') Stock
+                        option(value='Precio') Precio
+                    button(type="submit" id='btnSubmitSea' disabled class="btnStyle") Buscar
+
+        div.contentCont
+            div.contentTable.table-like#contentTable
+
+    script(src="https://code.jquery.com/jquery-3.7.0.min.js")
+    script(src="https://cdn.jsdelivr.net/npm/sweetalert2@11")
+    script(src="/js/products.js")

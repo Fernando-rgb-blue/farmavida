@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Productos - Farmacia</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/products.css">
+    <link rel="stylesheet" href="/css/popup.css">
+  </head>
+  <body>
+    <head>
+      <link rel="stylesheet" href="/css/header.css">
+    </head>
+    <header class="header"> 
+      <nav class="nav-header"> 
+        <ul class="link-list">
+          <li class="link"><a href="./products"><img src="/icons/imagen-productos.png">Productos</a></li>
+          <li class="link"><a href="/sales"><img src="/icons/imagen-ventas.png">Ventas</a></li>
+          <li class="link"><a href="/customers"><img src="/icons/imagen-clientes.png">Clientes</a></li>
+          <li class="link"><a href="/providers"><img src="/icons/imagen-proveedores.png">Proveedores</a></li>
+          <li class="link"><a href="/reports"><img src="/icons/imagen-reportes.png">Reportes</a></li>
+          <li class="link"><a href="/out"><img src="/icons/imagen-salir.png">Salir</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="popup popupAddProd" id="popupAddProd">
+      <div class="popup-content" id="popupContent">
+        <div class="popup-close-content">
+          <button class="close" type="button" id="closeAddProd">&times; </button>
+        </div>
+        <div class="popup-title-content">
+          <h2>Añadir Productos</h2>
+        </div>
+        <div class="popup-form-content">
+          <form action="/products" method="post" id="formAddProd">
+            <label for="ideProdAdd">ID del Producto:</label>
+            <input class="inputFormAdd" type="number" id="ideProdAdd" name="_id" min="0">
+            <label for="nomProdAdd">Nombre del Producto:</label>
+            <input class="inputFormAdd" type="text" id="nomProdAdd" name="Nom_Prod">
+            <label for="conProdAdd">Concentrado:</label>
+            <input class="inputFormAdd" type="text" id="conProdAdd" name="Concent">
+            <label for="nomForProdAdd">Nombre Formal de Farmacia:</label>
+            <input class="inputFormAdd" type="text" id="nomForProdAdd" name="Nom_Form_Farm">
+            <label for="nomForSimProdAdd">Nombre Formal de Farmacia Simp.:</label>
+            <input class="inputFormAdd" type="text" id="nomForSimProdAdd" name="Nom_Form_Farm_Simplif">
+            <label for="presProdAdd">Presentacion:</label>
+            <input class="inputFormAdd" type="text" id="presProdAdd" name="Presentac">
+            <label for="fraProdAdd">Fracciones:</label>
+            <input class="inputFormAdd" type="number" id="fraProdAdd" name="Fracciones" min="0">
+            <label for="fecVenRegProdAdd">Fecha de Vencimiento de RS:</label>
+            <input class="inputFormAdd" type="date" id="fecVenRegProdAdd" name="Fec_Vcto_Reg_Sanitario">
+            <label for="numRegProdAdd">Numero de RS:</label>
+            <input class="inputFormAdd" type="text" id="numRegProdAdd" name="Num_RegSan">
+            <label for="sitProdAdd">Situación:</label>
+            <select class="inputFormAdd" name="sitProdAdd" id="sitProdAdd">
+              <option value="ACT">Activado</option>
+              <option value="DES">Desactivado</option>
+            </select>
+            <label for="stoProdAdd">Stock:</label>
+            <input class="inputFormAdd" type="number" id="stoProdAdd" name="Stock">
+            <label for="precProdAdd">Precio:</label>
+            <input class="inputFormAdd" type="text" id="precProdAdd" name="Precio">
+            <button type="submit" id="btnSubmitAdd" disabled>Agregar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="popup popupChaProd" id="popupChaProd">
+      <div class="popup-content" id="popupContent">
+        <div class="popup-close-content">
+          <button class="close" type="button" id="closeChaProd">&times;</button>
+        </div>
+        <div class="popup-title-content">
+          <h2>Modificar Productos</h2>
+        </div>
+        <div class="popup-form-content">
+          <form action="/products" method="post" id="formChaProd">
+            <label for="ideProd">ID del Producto:</label>
+            <input type="number" id="ideProdCha" name="_id" style="background-color: #E4DEDE">
+            <label for="nomProd">Nombre del Producto:</label>
+            <input type="text" id="nomProdCha" name="Nom_Prod">
+            <label for="conProd">Concentrado:</label>
+            <input type="text" id="conProdCha" name="Concent">
+            <label for="nomForProd">Nombre Formal de Farmacia:</label>
+            <input type="text" id="nomForProdCha" name="Nom_Form_Farm">
+            <label for="nomForSimProd">Nombre Formal de Farmacia Simp.:</label>
+            <input type="text" id="nomForSimProdCha" name="Nom_Form_Farm_Simplif">
+            <label for="presProd">Presentacion:</label>
+            <input type="text" id="presProdCha" name="Presentac">
+            <label for="fraProd">Fracciones:</label>
+            <input type="number" id="fraProdCha" name="Fracciones" min="0">
+            <label for="fecVenRegProd">Fecha de Vencimiento de RS:</label>
+            <input type="date" id="fecVenRegProdCha" name="Fec_Vcto_Reg_Sanitario">
+            <label for="numRegProd">Numero de RS:</label>
+            <input type="text" id="numRegProdCha" name="Num_RegSan">
+            <label for="sitProdCha">Situación:</label>
+            <select class="inputFormAdd" name="sitProdCha" id="sitProdCha">
+              <option value="ACT">Activado</option>
+              <option value="DES">Desactivado</option>
+            </select>
+            <label for="stoProd">Stock:</label>
+            <input type="number" id="stoProdCha" name="Stock">
+            <label for="precProd">Precio:</label>
+            <input type="number" id="precProdCha" name="Precio">
+            <button type="submit" id="btnSubmitCha" disabled>Modificar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="popup popupDelProd" id="popupDelProd">
+      <div class="popup-content" id="popupContent">
+        <div class="popup-close-content">
+          <button class="close" type="button" id="closeDelProd">&times; </button>
+        </div>
+        <div class="popup-title-content">
+          <h2>Eliminar Productos</h2>
+        </div>
+        <div class="popup-form-content">
+          <form action="/products" method="post" id="formDelProd">
+            <label for="ideProd">ID del Producto:</label>
+            <input type="number" id="ideProdDel" name="_id" min="0">
+            <button type="submit" id="btnSubmitDel" disabled>Eliminar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="loader" id="loader"></div>
+    <div class="nav2Cus">
+      <div class="addContent">
+        <div class="title-bar">
+          <h2>Productos</h2>
+        </div>
+        <div class="options">
+          <button class="btnStyle" id="addButton">Añadir</button>
+          <button class="btnStyle" id="chaButton">Modificar</button>
+          <button class="btnStyle" id="delButton">Eliminar</button>
+        </div>
+      </div>
+      <div class="searchContent">
+        <form class="formSearch" action="/products" method="post" id="formSeaProd">
+          <input type="number" placeholder="Buscar" id="prodSea" name="searchBar">
+          <select name="catProdSea" id="catProdSea">
+            <option value="_id">ID</option>
+            <option value="Nom_Prod">Nombre</option>
+            <option value="Concent">Concentrado</option>
+            <option value="Nom_Form_Farm">Nombre Formal</option>
+            <option value="Nom_Form_Farm_Simplif">Nombre Formal Simp.</option>
+            <option value="Fec_Vcto_Reg_Sanitario">Fecha Ven. RS</option>
+            <option value="Num_RegSan">Numero de RS</option>
+            <option value="Situacion">Situacion</option>
+            <option value="Stock">Stock</option>
+            <option value="Precio">Precio</option>
+          </select>
+          <button class="btnStyle" type="submit" id="btnSubmitSea" disabled>Buscar</button>
+        </form>
+      </div>
+    </div>
+    <div class="contentCont">
+      <div class="contentTable table-like" id="contentTable"></div>
+    </div>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="/js/products.js"></script>
+</html>

@@ -1,0 +1,38 @@
+doctype html
+html
+    head
+        title Ventas - Farmacia
+        link(rel='stylesheet', href='/css/index.css')       
+        link(rel='stylesheet', href='/css/anadir.css')
+    body.bodyy2
+        include header.pug
+        h1 Añadir Venta
+    form(id='ventaForm' action="/anadir" method="post")
+        input(type="hidden" name="formId" value="form2")
+
+        label(for='ideVent') ID del Producto:
+        input(type='text', id='ideVent', name='_id', required)
+        br
+        label(for='fecha') Fecha:
+        input(type='date', id='fecha', name='fecha', required)
+        br
+        label(for='idCliente') ID Cliente:
+        input(type='text', id='idCliente', name='id_cliente', required)
+        br
+        label(for='productos') Productos:
+        div(id='productosContainer')
+            button(type='button', id='agregarProducto', class='agregarProducto') Agregar Producto
+            div(class='producto')
+                input(type='text', class='codProd', name='cod_prod', placeholder='Código de Producto')
+                input(type='text', class='nombre', name='nombre', placeholder='Nombre')
+                input(type='number', class='cantidad', name='cantidad', placeholder='Cantidad', min='1', max='50')
+                input(type='text', class='precio validarPrecio', name='precio', placeholder='Precio', min='0')
+                button(type='button', class='eliminarProducto') Eliminar
+            
+        br
+        label(for='precioTotal') Precio Total:
+        input(type='text', id='precioTotal', name='precio_total')
+        br
+        button(type='submit') Guardar Venta
+
+    script(src="/js/anadir.js")

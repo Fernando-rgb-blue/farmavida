@@ -1,0 +1,29 @@
+head
+    link(rel='stylesheet' href='/css/popupCus.css')
+body
+    .popup.popupAddClient#popupAddClient
+        .popup-content#popupContent
+            .popup-close-content
+                button(type='button' class='close' id='closeAddClient') &times;
+            .popup-title-content
+                h2 Añadir Cliente
+            .popup-form-content
+                form(action='/customers' method='post' id='formAddProd')
+
+                    input(type='hidden' name='formId' value='form2')
+
+                    label(for='idCliente') DNI del Cliente:
+                    input(type='number' id='idCliente' name='_id', required)
+
+                    label(for='nombreCliente') Nombre del Cliente:
+                    input(type='text' id='nombreCliente' name='nombre', required)
+
+                    button(type='submit' id='btnSubmitAdd') Agregar
+
+    script.
+        const closeButton = document.getElementById('closeAddClient');
+
+        closeButton.addEventListener('click', (e) => {
+            const ventanaEmergente = document.getElementById('popupAddClient');
+            ventanaEmergente.style.display = 'none';
+        });

@@ -1,0 +1,34 @@
+doctype html
+html
+    head
+        title Clientes - Farmacia
+        link(rel='stylesheet', href='/css/index.css')
+        link(rel='stylesheet', href='/css/customers.css')
+    body
+        include header.pug
+        include popups/popupCusAdd.pug
+        div.nav2Cus
+            div.addContent
+                div.title-bar
+                    h2 Clientes
+                div.options
+                    button#addButton Añadir
+                    button#delButton Eliminar
+            div.searchContent
+                form(action="/customers" method="post")#formSeaCust.formSearch
+                    input(type="hidden" name="formId" value="form1")
+                    input(type='text', placeholder='Buscar' id='searchBar' name='searchBar')
+                    select(name='CustomersCat' id='CustomersCat')
+                        option(value='_id') DNI
+                        option(value='nombre') Nombre 
+                    button(type="submit" id='btnSearch') Buscar
+        
+        div.contentCont
+            div.contentTableCust.table-like
+                each result in results
+                    each value, key in result
+                        p
+                            span #{key}
+                            span #{value}
+
+    script(src="/js/products.js")

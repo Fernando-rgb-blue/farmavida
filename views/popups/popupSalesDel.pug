@@ -1,0 +1,47 @@
+head
+    link(rel='stylesheet', href='/css/popup.css')
+body
+    div.popup.popupDel#popupDel
+        div.popup-content#popupContent
+            div.popup-close-content
+                button(type="button").close#closeDel &times; 
+            div.popup-title-content
+                h2 Eliminar Productos
+            div.popup-form-content
+                form(action="/sales" method="post")#formDelProd
+                    //- formDelProd  ideProd  ideProdDel
+                    label(for="ideVent") ID de la venta:
+                    input(type="text" id="ideVentDel" name="_id", required)
+                    button(type="submit")#btnSubmitDel Eliminar
+    
+    script(src="https://code.jquery.com/jquery-3.6.0.min.js")
+    script.
+        $(document).ready(function() {
+            $("#btnSubmitDel").on("click", function(e) {
+                e.preventDefault();
+                $(this).prop("disabled", true);
+                const _id = $("#ideVentDel").val();
+                $.ajax({
+                    url: "/sales",
+                    type: "POST",
+                    data: {
+                        formId: "form3",
+                        _id: _id
+                    },
+                    success: function(response) {
+                        alert(response.message);
+                    },
+                    error: function(xhr, status, error) {
+                        alert("HA OCURRIDO UN PROBLEMA");
+                    },
+                    complete: function() {
+                        $("#btnSubmitDel").prop("disabled", false);
+                    }
+                });
+            });
+
+            $("#closeDel").on("click", function(e) {
+                $("#popupDel").hide();
+            });
+        });
+

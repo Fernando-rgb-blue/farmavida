@@ -1,0 +1,45 @@
+.table-like {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-like p {
+    display: table-row;
+}
+
+.table-like p span {
+    display: table-cell;
+    padding: 8px;
+    border-bottom: 1px solid #ccc;
+    /* text-align: left; */
+}
+
+.table-like p:last-child span {
+    border-bottom: none;
+}
+
+/* modificado */
+
+
+.table-like .productos_vendidos p {
+    display: table-row;
+}
+
+.table-like .productos_vendidos p span {
+    display: table-cell;
+    padding: 8px;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+}
+
+.options{
+    padding: 15px 0px;
+    column-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}

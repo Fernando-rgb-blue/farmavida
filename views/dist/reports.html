@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Reportes - Farmacia</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/popup.css">
+    <link rel="stylesheet" href="/css/reports.css">
+  </head>
+  <body>
+    <head>
+      <link rel="stylesheet" href="/css/header.css">
+    </head>
+    <header class="header"> 
+      <nav class="nav-header"> 
+        <ul class="link-list">
+          <li class="link"><a href="./products"><img src="/icons/imagen-productos.png">Productos</a></li>
+          <li class="link"><a href="/sales"><img src="/icons/imagen-ventas.png">Ventas</a></li>
+          <li class="link"><a href="/customers"><img src="/icons/imagen-clientes.png">Clientes</a></li>
+          <li class="link"><a href="/providers"><img src="/icons/imagen-proveedores.png">Proveedores</a></li>
+          <li class="link"><a href="/reports"><img src="/icons/imagen-reportes.png">Reportes</a></li>
+          <li class="link"><a href="/out"><img src="/icons/imagen-salir.png">Salir</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="popup popupRe6Dat" id="popupRe6Dat">
+      <div class="popup-content" id="popupContent">
+        <div class="popup-close-content">
+          <button class="close" type="button" id="closeRe6">&times;</button>
+        </div>
+        <div class="popup-title-content">
+          <h2>Modificar Productos</h2>
+        </div>
+        <div class="popup-form-content">
+          <form action="/products" method="post" id="formRe6">
+            <label for="fecIniRe6">Fecha Inicial:</label>
+            <input type="date" id="fecIniRe6" name="fecIniRe6">
+            <label for="fecFinRe6">Fecha Final:</label>
+            <input type="date" id="fecFinRe6" name="fecFinRe6">
+            <button type="submit" id="report6" disabled>Consultar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="loader" id="loader"></div>
+    <div class="titleContent">
+      <h1>REPORTES</h1>
+    </div>
+    <div class="contentCont" id="contentCont">
+      <div class="contentRep">
+        <ul class="subHeader" id="subheader">
+          <li class="btnReport" id="report1">Mostrar todo
+            <ul class="submenuRep1" id="submenuRep1">
+              <li class="btnReport" id="report1a">Cliente</li>
+              <li class="btnReport" id="report1b">Empleado</li>
+              <li class="btnReport" id="report1c">Pedido</li>
+              <li class="btnReport" id="report1d">Producto</li>
+              <li class="btnReport" id="report1e">Proveedor</li>
+              <li class="btnReport" id="report1f">Venta</li>
+            </ul>
+          </li>
+          <li class="btnReport" id="report2">Pedido con proveedor</li>
+          <li class="btnReport" id="report3">Stock de productos</li>
+          <li class="btnReport" id="report4">Proveedores y pedidos </li>
+          <li class="btnReport" id="report5">Productos más vendidos</li>
+          <li class="btnReport" id="report6PopUp">Ventas por fechas</li>
+        </ul>
+        <div class="resultsRep" id="resultsRep"></div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/reports.js"> </script>
+  </body>
+</html>

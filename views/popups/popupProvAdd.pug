@@ -1,0 +1,24 @@
+div.popup.popupAddProv#popupAddProv
+    div.popup-content#popupContent
+        div.popup-close-content
+            button(type="button").close#closeAddProv &times; 
+        div.popup-title-content
+            h2 Añadir Proveedor
+        div.popup-form-content
+            form(action="/providers" method="post")#formAddProv
+
+                label(for="ideProvAdd") ID del Proveedor:
+                input(type="text" id="ideProvAdd" name="_id").inputFormAdd
+
+                label(for="nomProvAdd") Nombre del Proveedor:
+                input(type="text" id="nomProvAdd" name="nombre").inputFormAdd
+
+                label(for="telfProvAdd") Teléfono:
+                input(type="text" id="telfProvAdd" name="telefono").inputFormAdd
+
+                label(for="emailProvAdd") Email:
+                input(type="text" id="emailProvAdd" name="email").inputFormAdd
+
+                
+
+                button(type="submit" id="btnSubmitAdd" disabled) Agregar

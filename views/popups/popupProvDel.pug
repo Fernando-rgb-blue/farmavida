@@ -1,0 +1,11 @@
+div.popup.popupDelProv#popupDelProv
+    div.popup-content#popupContent
+        div.popup-close-content
+            button(type="button").close#closeDelProv &times; 
+        div.popup-title-content
+            h2 Eliminar Proveedores
+        div.popup-form-content
+            form(action="/providers" method="post")#formDelProv
+                label(for="ideProv") ID del Proveedor:
+                input(id="ideProvDel" name="_id" min=0)
+                button(type="submit" id="btnSubmitDel" disabled) Eliminar

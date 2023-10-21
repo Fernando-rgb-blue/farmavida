@@ -1,0 +1,25 @@
+.table-like {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-like p {
+    display: table-row;
+}
+
+.table-like p span {
+    display: table-cell;
+    padding: 8px;
+    border-bottom: 1px solid #ccc;
+}
+
+.table-like p:last-child span {
+    border-bottom: none;
+}
+
+.options{
+    padding: 15px 0px;
+    column-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+}

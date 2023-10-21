@@ -1,0 +1,15 @@
+.popup.popupRe6Dat#popupRe6Dat
+    .popup-content#popupContent
+        .popup-close-content
+            button(type="button").close#closeRe6 &times;
+        .popup-title-content
+            h2 Ventas por Fechas
+        .popup-form-content
+            form(action="/products" method="post")#formRe6
+                label(for="fecIniRe6") Fecha Inicial:
+                input(type="date" id="fecIniRe6" name="fecIniRe6")
+
+                label(for="fecFinRe6") Fecha Final:
+                input(type="date" id="fecFinRe6" name="fecFinRe6")
+
+                button(type="submit" id="report6" disabled) Consultar

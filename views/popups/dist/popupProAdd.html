@@ -1,0 +1,43 @@
+
+<div class="popup popupAddProd" id="popupAddProd">
+  <div class="popup-content" id="popupContent">
+    <div class="popup-close-content">
+      <button class="close" type="button" id="closeAddProd">&times; </button>
+    </div>
+    <div class="popup-title-content">
+      <h2>Añadir Productos</h2>
+    </div>
+    <div class="popup-form-content">
+      <form action="/products" method="post" id="formAddProd">
+        <label for="ideProdAdd">ID del Producto:</label>
+        <input class="inputFormAdd" type="number" id="ideProdAdd" name="_id" min="0"/>
+        <label for="nomProdAdd">Nombre del Producto:</label>
+        <input class="inputFormAdd" type="text" id="nomProdAdd" name="Nom_Prod"/>
+        <label for="conProdAdd">Concentrado:</label>
+        <input class="inputFormAdd" type="text" id="conProdAdd" name="Concent"/>
+        <label for="nomForProdAdd">Nombre Formal de Farmacia:</label>
+        <input class="inputFormAdd" type="text" id="nomForProdAdd" name="Nom_Form_Farm"/>
+        <label for="nomForSimProdAdd">Nombre Formal de Farmacia Simp.:</label>
+        <input class="inputFormAdd" type="text" id="nomForSimProdAdd" name="Nom_Form_Farm_Simplif"/>
+        <label for="presProdAdd">Presentacion:</label>
+        <input class="inputFormAdd" type="text" id="presProdAdd" name="Presentac"/>
+        <label for="fraProdAdd">Fracciones:</label>
+        <input class="inputFormAdd" type="number" id="fraProdAdd" name="Fracciones" min="0"/>
+        <label for="fecVenRegProdAdd">Fecha de Vencimiento de RS:</label>
+        <input class="inputFormAdd" type="date" id="fecVenRegProdAdd" name="Fec_Vcto_Reg_Sanitario"/>
+        <label for="numRegProdAdd">Numero de RS:</label>
+        <input class="inputFormAdd" type="text" id="numRegProdAdd" name="Num_RegSan"/>
+        <label for="sitProdAdd">Situación:</label>
+        <select class="inputFormAdd" name="sitProdAdd" id="sitProdAdd">
+          <option value="ACT">Activado</option>
+          <option value="DES">Desactivado</option>
+        </select>
+        <label for="stoProdAdd">Stock:</label>
+        <input class="inputFormAdd" type="number" id="stoProdAdd" name="Stock"/>
+        <label for="precProdAdd">Precio:</label>
+        <input class="inputFormAdd" type="text" id="precProdAdd" name="Precio"/>
+        <button type="submit" id="btnSubmitAdd" disabled="disabled">Agregar</button>
+      </form>
+    </div>
+  </div>
+</div>

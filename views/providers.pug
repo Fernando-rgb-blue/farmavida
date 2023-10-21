@@ -1,0 +1,42 @@
+doctype html
+html
+    head
+        title Proveedores - Farmacia
+        link(rel='stylesheet', href='/css/index.css')
+        link(rel='stylesheet', href='/css/providers.css')
+        link(rel='stylesheet', href='/css/popupProv.css')
+    body
+        include header.pug
+        include popups/popupProvAdd.pug
+        include popups/popupProvCha.pug
+        include popups/popupProvDel.pug
+
+        div.loader#loader
+
+        div.nav2Cus
+            div.addContent
+                div.title-bar
+                    h2 Proveedores
+                div.options
+                    button#addButton.btnStyle Añadir
+                    button#chaButton.btnStyle Modificar
+                    button#delButton.btnStyle Eliminar
+            div.searchContent
+                form(action="/providers" method="post")#formSeaProv.formSearch
+                    input(type="hidden" name="formId" value="form1")
+                    input(type='text', placeholder='Buscar' id='searchBar' name='searchBar')
+                    select(name='ProvidersCat' id='ProvidersCat')
+                        option(value='_id') ID
+                        option(value='nombre') Nombre 
+                    button(type="submit" id='btnSearch') Buscar
+        
+        div.contentCont
+            div.contentTableCust.table-like
+                each result in results
+                    each value, key in result
+                        p
+                            span #{key}
+                            span #{value}
+    script(src="https://code.jquery.com/jquery-3.7.0.min.js")
+    script(src="https://cdn.jsdelivr.net/npm/sweetalert2@11")
+    script(src="/js/providers.js")

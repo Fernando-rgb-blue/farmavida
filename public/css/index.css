@@ -1,0 +1,141 @@
+html{
+    height: 100%;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+    width: 100vw;
+    min-width: 1200px;
+    overflow-x: none;
+}
+
+.nav2Cus{
+    display: grid;
+    padding: 20px 30px;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+}
+
+.nav2Cus button{
+    font-family: 'PT Serif', serif;
+    font-weight: 700;
+    background: #4495fa;
+    border: none;
+    color: black;
+    cursor: pointer;
+}
+
+.nav2Cus button:hover{
+    background: white;
+    border: 1px solid;
+    transition: 0.2s;
+}
+
+.addContent{
+    display: inherit;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    padding: 0px 40px;
+}
+
+.options{
+    display: inherit;
+    padding: 15px 20px;
+    grid-template-rows: 1fr;
+    column-gap: 20px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.searchContent{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+
+
+.formSearch{
+    display: grid;
+    padding: 18px 40px;
+    grid-template-rows: 1fr;
+    column-gap: 10px;
+    grid-template-columns: 2fr 1fr 1fr;
+}
+
+.contentCont{
+    flex-grow: 1;
+    max-width: 100vw;
+    padding: 50px 250px 100px 250px;
+    overflow-x: hidden;
+}
+
+.contentTable{
+    width: 100%;
+    height: 100%;
+    background: rgb(232, 232, 232);
+    overflow-y: auto;
+}
+
+.contentTableCust{
+    width: 5%;
+    height: 5%;
+    background: rgb(232, 232, 232);
+    overflow-y: auto;
+}
+
+.table-width {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.tblPed {
+    table-layout: fixed;
+    padding: 20px 5px;
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px solid black;
+}
+
+.tblPed td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.tblProd {
+    table-layout: fixed;
+    padding: 20px 5px;
+    width: 100%;
+    height: 100%;
+}
+
+.tblProd td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.tblProv {
+    table-layout: fixed;
+    padding: 20px 5px;
+    width: 100%;
+    height: 100%;
+}
+
+.tblProv td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.loader{
+    display: none;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background: url('../gifs/loading.gif') 50% 50% no-repeat rgb(249,249,249);
+    opacity: .8;
+}

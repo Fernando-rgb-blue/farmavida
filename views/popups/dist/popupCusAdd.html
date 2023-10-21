@@ -1,0 +1,33 @@
+<head>
+    <link rel='stylesheet' href='/css/popupCus.css'>
+</head>
+<body>
+    <div class="popup popupAddClient" id="popupAddClient">
+        <div class="popup-content" id="popupContent">
+            <div class="popup-close-content">
+                <button type="button" class="close" id="closeAddClient">&times;</button>
+            </div>
+            <div class="popup-title-content">
+                <h2>Añadir Cliente</h2>
+            </div>
+            <div class="popup-form-content">
+                <form action="/customers" method="post" id="formAddProd">
+                    <input type="hidden" name="formId" value="form2">
+                    <label for="ideClient">ID del Cliente:</label>
+                    <input type="number" id="ideClient" name="_id" required>
+                    <label for="nomClient">Nombre del Cliente:</label>
+                    <input type="text" id="nomClient" name="Nom_Cliente" required>
+                    <button type="submit" id="btnSubmitAdd">Agregar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        const closeButton = document.getElementById('closeAddClient');
+
+        closeButton.addEventListener('click', (e) => {
+            const ventanaEmergente = document.getElementById('popupAddClient');
+            ventanaEmergente.style.display = 'none';
+        });
+    </script>
+</body>

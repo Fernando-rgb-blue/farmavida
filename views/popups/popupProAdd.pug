@@ -1,0 +1,48 @@
+div.popup.popupAddProd#popupAddProd
+    div.popup-content#popupContent
+        div.popup-close-content
+            button(type="button").close#closeAddProd &times; 
+        div.popup-title-content
+            h2 Añadir Productos
+        div.popup-form-content
+            form(action="/products" method="post")#formAddProd
+
+                label(for="ideProdAdd") ID del Producto:
+                input(type="number" id="ideProdAdd" name="_id", min=0).inputFormAdd
+
+                label(for="nomProdAdd") Nombre del Producto:
+                input(type="text" id="nomProdAdd" name="Nom_Prod").inputFormAdd
+
+                label(for="conProdAdd") Concentrado:
+                input(type="text" id="conProdAdd" name="Concent").inputFormAdd
+
+                label(for="nomForProdAdd") Nombre Formal de Farmacia:
+                input(type="text" id="nomForProdAdd" name="Nom_Form_Farm").inputFormAdd
+
+                label(for="nomForSimProdAdd") Nombre Formal de Farmacia Simp.:
+                input(type="text" id="nomForSimProdAdd" name="Nom_Form_Farm_Simplif").inputFormAdd
+
+                label(for="presProdAdd") Presentacion:
+                input(type="text" id="presProdAdd" name="Presentac").inputFormAdd
+
+                label(for="fraProdAdd") Fracciones:
+                input(type="number" id="fraProdAdd" name="Fracciones", min=0).inputFormAdd
+
+                label(for="fecVenRegProdAdd") Fecha de Vencimiento de RS:
+                input(type="date" id="fecVenRegProdAdd" name="Fec_Vcto_Reg_Sanitario").inputFormAdd
+
+                label(for="numRegProdAdd") Numero de RS:
+                input(type="text" id="numRegProdAdd" name="Num_RegSan").inputFormAdd
+
+                label(for="sitProdAdd") Situación:
+                select(name='sitProdAdd' id='sitProdAdd').inputFormAdd
+                    option(value='ACT') Activado
+                    option(value='DES') Desactivado
+
+                label(for="stoProdAdd") Stock:
+                input(type="number" id="stoProdAdd" name="Stock").inputFormAdd
+
+                label(for="precProdAdd") Precio:
+                input(type="text" id="precProdAdd" name="Precio").inputFormAdd
+
+                button(type="submit" id="btnSubmitAdd" disabled) Agregar

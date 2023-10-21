@@ -1,0 +1,53 @@
+doctype html
+html
+    head
+        title Ventas - Farmacia
+        link(rel='stylesheet', href='/css/index.css')
+        link(rel='stylesheet', href='/css/sales.css')
+        //- link(rel='stylesheet', href='/css/reports.css')
+    body
+        include header.pug
+        include popups/popupSalesDel.pug
+        div.nav2Cus
+            div.addContent
+                div.title-bar
+                    h2 Ventas
+                div.options
+                    button#addButton 
+                        a(href='./anadir') Añadir
+                    //- button#chaButton Modificar
+                    button#delButton Eliminar
+            div.searchContent
+                //- PONER EN 'ACTION' EL NOMBRE DE TU ARCHIVO .PUG
+                form(action="/sales" method="post")#formSeaSales.formSearch
+                    input(type="hidden" name="formId" value="form1")
+                    input(type='text', placeholder='Buscar' id='searchBar' name='searchBar')
+                    select(name='SalesCat' id='SalesCat')
+                        option(value='_id') ID
+                        option(value='fecha') Fecha de Venta
+                        option(value='id_cliente') DNI Cliente
+                    button(type="submit" id='btnSearch') Buscar
+        div.contentCont
+            div.contentTable.table-like
+                each result in results
+                    each value, key in result
+                        if key === "productos_vendidos"
+                            div.productos_vendidos
+                                p 
+                                    span #{key}
+                                    //- span ------------
+                                each producto in value
+                                    each val, k in producto
+                                        p
+                                            span  
+                                            span #{k}
+                                            span #{val}
+                                    p 
+                                        span -
+                        else
+                            p
+                                span #{key}
+                                span #{value}
+
+    
+    script(src="/js/sales.js")

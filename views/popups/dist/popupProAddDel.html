@@ -1,0 +1,32 @@
+
+<head>
+  <link rel="stylesheet" href="/css/popup.css"/>
+</head>
+<body>
+  <div class="popup" id="popup">
+    <div class="popup-content" id="popupContent">
+      <div class="popup-close-content">
+        <button class="close" type="button" id="close">&times; </button>
+      </div>
+      <div class="popup-title-content">
+        <h2>Añadir Productos</h2>
+      </div>
+      <div class="popup-form-content">
+        <form>
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre"/>
+          <label for="dni">DNI:</label>
+          <input type="text" id="dni" name="dni"/>
+          <input type="submit" value="Enviar"/>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script>
+    const closeButton = document.getElementById("close");
+    closeButton.addEventListener("click", function() {
+        var ventanaEmergente = document.getElementById("popup");
+        ventanaEmergente.style.display = "none";
+    });
+  </script>
+</body>

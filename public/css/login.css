@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Figtree', sans-serif;
+}
+
+.color-square {
+  position: absolute;
+  left: 1000px;
+  width: 500px;
+  height: 550px;
+  background-color: #4495FA;
+}
+
+.logo {
+  position: absolute;
+  height: 400px;
+  width: 600px;
+  top: 150px;
+  left: 800px;
+}
+
+.container-login-form {
+  position: absolute;
+  top: 140px;
+  left: 170px;
+  width: 300px;
+  margin: auto;
+  padding: 20px 20px;
+}
+
+.titulo {
+  text-align: center;
+  font-size: 40px
+}
+
+.form-group1 {
+  margin-bottom: 10px;
+}
+
+.form-group2 {
+  margin-bottom: 10px;
+}
+
+#toggle-password {
+  margin-top: 10px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 14px;
+  background-color: #F6F6F6;
+  border: none;
+  border-radius: 20px;
+}
+
+button[type="submit"] {
+  margin-top: 20px;
+  margin-left: 85px;
+  width: 50%;
+  padding: 10px;
+  background-color: #4495FA;
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #7AB5FF;
+}
+
+#message-wrong {
+  display: none;
+  color: #d00000;
+  font-size: 14px;
+}
+
+.remember-check {
+  padding-top: 10px;
+}
+
+.forgot-login {
+  position: relative;
+  width: 300px;
+  font-size: 15px;
+}

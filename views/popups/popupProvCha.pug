@@ -1,0 +1,23 @@
+.popup.popupChaProv#popupChaProv
+    .popup-content#popupContent
+        .popup-close-content
+            button(type="button").close#closeChaProv &times;
+        .popup-title-content
+            h2 Modificar Proveedores
+        .popup-form-content
+            form(action="/providers" method="post")#formChaProv
+                label(for="ideProv") ID del Proveedor:
+                input(type="text" id="ideProvCha" name="_id" style="background-color: #E4DEDE")
+
+                label(for="nomProv") Nombre del Proveedor:
+                input(type="text" id="nomProvCha" name="nombre")
+
+                label(for="telfProv") Teléfono:
+                input(type="text" id="telfProvCha" name="telefono")
+
+                label(for="emailProv") Email:
+                input(type="text" id="emailProvCha" name="email")
+
+
+
+                button(type="submit" id="btnSubmitCha" disabled) Modificar

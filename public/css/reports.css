@@ -1,0 +1,94 @@
+body{
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.titleContent{
+    padding: 20px 30px;
+    text-align: center;
+}
+
+.titleContent h1{
+    margin: 10px 0px;
+    user-select: none;
+}
+
+.contentCont{
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 1200px;
+    padding: 0px 50px 40px 50px;
+}
+
+.contentRep {
+    display: flex;
+    flex-direction: column;
+    
+    min-width: 100%;
+    min-height: 100%;
+    background-color: rgb(232, 232, 232);
+}
+
+.subHeader, ul {
+    padding: 0;
+}
+
+.subHeader{
+    display: grid;
+    margin: 0;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1;
+}
+
+.subHeader .btnReport{
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+    list-style: none;
+    background-color: #4496fac8;
+    cursor: pointer;
+    padding: 15px 10px;
+    user-select: none;
+}
+
+.subHeader li:hover{
+    background-color: #4450fa;
+}
+
+
+#report1{
+    position: relative;
+    transition: .4s;
+    box-sizing: border-box;
+}
+
+#report1 .submenuRep1{
+    display: none;
+}
+
+#report1:hover .submenuRep1{
+    position: absolute;
+    display: block;
+    width: 100%;
+    top: 100%;
+    left: 0;
+}
+
+.resultsRep{
+    user-select: none;
+    display: block;
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
+}
+
+/* MODIFICAR ALGO DEL FORMULARIO */
+.popup-content form input{
+    margin-bottom: 10px;
+}
+
+/* PUPUP */
+.popupRe6Dat{
+    display: none;
+}

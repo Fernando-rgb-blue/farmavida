@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Formulario</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <style>
+      .header {
+        display: flex;
+        align-items: center;
+      }
+      
+      .link-list {
+        list-style-type: none;
+        display: flex;
+        justify-content: flex-start;
+      }
+      
+      .link-list li {
+        margin-right: 10px;
+      }
+      
+      .link-list li a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: black;
+      }
+      
+      .link-list li a:hover {
+        color: blue;
+      }
+      
+      .image-container {
+        position: absolute;
+        top: 80px;
+        left: 20px;
+      }
+      
+      .image-container img {
+        width: 10%;
+        height: 5%;
+      }
+      
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 100px;
+      }
+      
+      label {
+        margin-bottom: 10px;
+      }
+      
+      input[type="submit"] {
+        background-color: #00BFFF;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      
+      input[type="submit"]:hover {
+        background-color: green;
+      }
+      
+      .form-title {
+        font-size: 24px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <head>
+      <link rel="stylesheet" href="/css/header.css">
+    </head>
+    <header class="header"> 
+      <nav class="nav-header"> 
+        <ul class="link-list">
+          <li class="link"><a href="./products"><img src="/icons/imagen-productos.png">Productos</a></li>
+          <li class="link"><a href="/sales"><img src="/icons/imagen-ventas.png">Ventas</a></li>
+          <li class="link"><a href="/customers"><img src="/icons/imagen-clientes.png">Clientes</a></li>
+          <li class="link"><a href="/providers"><img src="/icons/imagen-proveedores.png">Proveedores</a></li>
+          <li class="link"><a href="/reports"><img src="/icons/imagen-reportes.png">Reportes</a></li>
+          <li class="link"><a href="/"><img src="/icons/imagen-salir.png">Salir</a></li>
+        </ul>
+      </nav>
+    </header>
+    <form>
+      <h2 class="form-title">DATOS DEL CLIENTE</h2>
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre">
+      <label for="dni">DNI:</label>
+      <input type="text" id="dni" name="dni">
+      <input type="submit" value="Enviar">
+    </form>
+  </body>
+</html>

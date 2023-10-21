@@ -1,0 +1,12 @@
+div.popup.popupDelProd#popupDelProd
+    div.popup-content#popupContent
+        div.popup-close-content
+            button(type="button").close#closeDelProd &times; 
+        div.popup-title-content
+            h2 Eliminar Productos
+        div.popup-form-content
+            form(action="/products" method="post")#formDelProd
+                label(for="ideProd") ID del Producto:
+                input(type="number" id="ideProdDel" name="_id" min=0)
+                button(type="submit" id="btnSubmitDel" disabled) Eliminar
+

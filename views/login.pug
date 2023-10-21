@@ -1,0 +1,36 @@
+doctype html
+html(lang="es")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Iniciar sesión
+        link(rel="stylesheet", href="/css/login.css")
+        link(rel="preconnect", href="https://fonts.googleapis.com")
+        link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin)
+        link(href="https://fonts.googleapis.com/css2?family=Figtree:wght@600&display=swap", rel="stylesheet")
+    body
+        .color-square
+        .container1
+            img.logo(src="icons/farmalogo.png", alt="")
+        section.container-login-form#login
+            form(action="/login", method="POST")#login-form
+                .form-title
+                    h1.titulo FARMAVIDA
+                .form-group1
+                    input(type="text", id="username", name="username", required, placeholder="Nombre de usuario")
+                .form-group2
+                    input(type="password", id="password", name="password", required, placeholder="Contraseña")
+                .wrong-password
+                    p#message-wrong Correo y/o contraseña incorrectos. Intente de nuevo.
+                .checkbox-showpass
+                    input(type="checkbox", id="toggle-password", onclick="togglePasswordVisibility()")
+                    label(for="toggle-password") Mostrar contraseña
+                .remember-check
+                    input(type="checkbox", id="remember")
+                    label(for="remember") Recuérdame
+                .forgot-login
+                    p
+                        a(href="#") ¿Olvidaste tu contraseña?
+                button(type="submit" id="btnLogin") Ingresar
+
+    script(src="js/login.js")

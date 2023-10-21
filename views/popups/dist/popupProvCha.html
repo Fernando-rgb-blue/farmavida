@@ -1,0 +1,24 @@
+
+<div class="popup popupChaProv" id="popupChaProv">
+  <div class="popup-content" id="popupContent">
+    <div class="popup-close-content">
+      <button class="close" type="button" id="closeChaProv">&times;</button>
+    </div>
+    <div class="popup-title-content">
+      <h2>Modificar Proveedores</h2>
+    </div>
+    <div class="popup-form-content">
+      <form action="/providers" method="post" id="formChaProv">
+        <label for="ideProv">ID del Proveedor:</label>
+        <input type="text" id="ideProvCha" name="_id" style="background-color: #E4DEDE"/>
+        <label for="nomProv">Nombre del Proveedor:</label>
+        <input type="text" id="nomProvCha" name="nombre"/>
+        <label for="telfProv">Teléfono:</label>
+        <input type="text" id="telfProvCha" name="telefono"/>
+        <label for="emailProv">Email:</label>
+        <input type="text" id="emailProvCha" name="email"/>
+        <button type="submit" id="btnSubmitCha" disabled="disabled">Modificar</button>
+      </form>
+    </div>
+  </div>
+</div>
